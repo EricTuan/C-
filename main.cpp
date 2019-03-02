@@ -1,27 +1,27 @@
+/******     引用     ******/
+
 #include <iostream>
-#include <string>
  
 using namespace std;
  
 int main ()
 {
-   string str1 = "Hello";
-   string str2 = "World";
-   string str3;
-   int  len ;
+   // 声明简单的变量
+   int    i;
+   double d;
  
-   // 复制 str1 到 str3
-   str3 = str1;
-   cout << "str3 : " << str3 << endl;
+   // 声明引用变量
+   int&    r = i;
+   double& s = d;
+   
+   i = 5;
+   cout << "Value of i : " << i << endl;
+   cout << "Value of i reference : " << r  << endl;
  
-   // 连接 str1 和 str2
-   str3 = str1 + " " + str2;
-   cout << "str1 + str2 : " << str3 << endl;
- 
-   // 连接后，str3 的总长度
-   len = str3.size();
-   cout << "str3.size() :  " << len << endl;
- 
+   d = 11.7;
+   cout << "Value of d : " << d << endl;
+   cout << "Value of d reference : " << s  << endl;
+   
    return 0;
 }
 
